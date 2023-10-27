@@ -8,6 +8,9 @@ class User(Base):
     id = Column(GUID, primary_key=True, default=GUID_DEFAULT_SQLITE)
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
+    email = Column(String, nullable=False)
+    username = Column(String, nullable=False)
+    password = Column(String, nullable=False)
     address = Column(String, nullable=True)
     activated = Column(Boolean, nullable=False, default=True)
     createdAt = Column(

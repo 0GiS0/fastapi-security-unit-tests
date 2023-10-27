@@ -6,7 +6,6 @@ client = TestClient(app)
 
 user_id = str(uuid.uuid4())
 
-
 def test_root():
     response = client.get("/api/healthchecker")
     assert response.status_code == 200
@@ -18,6 +17,9 @@ def test_create_user():
         "id": user_id,
         "first_name": "PLACEHOLDER",
         "last_name": "PLACEHOLDER",
+        "email": "PLACEHOLDER@returngis.net",
+        "username": "PLACEHOLDER",
+        "password": "PLACEHOLDER",
         "address": "PLACEHOLDER",
         "activated": False,
         "createdAt": "2023-03-17T00:04:32",
@@ -29,6 +31,9 @@ def test_create_user():
         "User": {
             "first_name": "PLACEHOLDER",
             "last_name": "PLACEHOLDER",
+            "email": "PLACEHOLDER@returngis.net",
+            "username": "PLACEHOLDER",
+            "password": "PLACEHOLDER",
             "activated": False,
             "createdAt": "2023-03-17T00:04:32",
             "id": user_id,
@@ -46,6 +51,9 @@ def test_get_user():
         "User": {
             "first_name": "PLACEHOLDER",
             "last_name": "PLACEHOLDER",
+            "email": "PLACEHOLDER@returngis.net",
+            "username": "PLACEHOLDER",
+            "password": "PLACEHOLDER",
             "activated": False,
             "createdAt": "2023-03-17T00:04:32",
             "address": "PLACEHOLDER",
@@ -60,6 +68,9 @@ def test_update_user():
         "id": user_id,
         "first_name": "PLACEHOLDER2",
         "last_name": "PLACEHOLDER2",
+        "email": "PLACEHOLDER2@returngis.net",
+        "username": "PLACEHOLDER2",
+        "password": "PLACEHOLDER2",
         "address": "PLACEHOLDER2",
         "activated": True,
         "createdAt": "2023-03-17T00:04:32",
@@ -71,7 +82,10 @@ def test_update_user():
         "Status": "Success",
         "User": {
             "first_name": "PLACEHOLDER2",
-            "last_name": "PLACEHOLDER2",
+            "last_name": "PLACEHOLDER2",            
+            "email": "PLACEHOLDER2@returngis.net",
+            "username": "PLACEHOLDER2",
+            "password": "PLACEHOLDER2",
             "activated": True,
             "createdAt": "2023-03-17T00:04:32",
             "id": user_id,
