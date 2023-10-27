@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+jsonschema
+pydantic
+loguru
+httpx
+coverage
+pytest
